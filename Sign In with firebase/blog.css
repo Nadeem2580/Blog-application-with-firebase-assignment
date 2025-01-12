@@ -1,0 +1,54 @@
+.blog-cards {
+    margin: auto;
+    margin-top: 30px;
+    /* width: 91%; */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 20px;
+    background: linear-gradient(90deg, rgb(3, 0, 59) 31%, rgba(9, 9, 121, 1) 60%, rgba(0, 212, 255, 1) 100%);
+border-radius: 5px;
+}
+
+.header h2 {
+    color: white;
+    font-size: 60px;
+}
+
+.header span {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.card-header {
+    background-color: rgb(145, 108, 108);
+    color: white;
+    padding: 10px;
+}
+
+.card-footer {
+    float: right;
+    font-size: 13px;
+    color: white;
+    padding: 10px;
+    background-color: rgb(104, 85, 85);
+}
+
+.card-header {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+@media screen and (max-width: 650px){
+    .header h2{
+        font-size: 40px;
+    }
+}
