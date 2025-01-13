@@ -57,7 +57,7 @@ const signIn = async () => {
         console.log("error", error.message)
     }
 
-    console.log("signIn")
+
 }
 
 
