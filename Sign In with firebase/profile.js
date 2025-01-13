@@ -27,7 +27,7 @@ const getData = async () => {
         email.innerHTML = `${docSnap.data().email} `;
 
     } catch (error) {
-        console.log(error.message, "error")
+        alert(error.message, "error")
     }
 }
 

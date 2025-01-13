@@ -54,6 +54,7 @@ const signIn = async () => {
         window.location.replace("./dashboard.html")
 
     } catch (error) {
+        alert(error.code)
         console.log("error", error.message)
     }
 

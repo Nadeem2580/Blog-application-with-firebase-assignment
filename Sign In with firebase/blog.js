@@ -64,7 +64,7 @@ const editHandler = async (ele) => {
         cardsRender()
 
     } catch (error) {
-        console.log("Error", error.message)
+        alert("Error", error.message)
 
     }
 }
@@ -75,7 +75,7 @@ const deleteFunc = async (ele) => {
         cardsRender()
 
     } catch (error) {
-        console.log("error", error.message)
+        alert("error", error.message)
     }
 
 }
@@ -83,7 +83,6 @@ const deleteFunc = async (ele) => {
 const logout = () => {
     localStorage.clear()
     window.location.replace("./index.html")
-    console.log("hello")
 }
 
 window.editHandler = editHandler;

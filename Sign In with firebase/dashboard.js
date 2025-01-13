@@ -31,7 +31,7 @@ const addblogs = async () => {
         blogs.value = ""
         checkStatus.checked = ""
     } catch (error) {
-        console.log(error.message, "Error")
+        alert(error.code , "Error")
     }
 }
 
@@ -89,7 +89,7 @@ const blogShow = async () => {
         })
 
     } catch (error) {
-        console.log("Error", error.message)
+        alert("Error", error.message)
     }
 
 }
@@ -109,14 +109,20 @@ const editHandler = async (ele) => {
         })
         blogShow()
     } catch (error) {
-        console.log("Error", error.message)
+        alert("Error", error.message)
 
     }
 }
 
 const deleteFunc = async (ele) => {
-    await deleteDoc(doc(db, "blogs", ele.target.id));
-    blogShow()
+    try {
+        await deleteDoc(doc(db, "blogs", ele.target.id));
+        blogShow()
+        
+    } catch (error) {
+        alert("Error", error.message)
+        
+    }
 
 }
 

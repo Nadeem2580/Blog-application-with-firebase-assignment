@@ -83,7 +83,7 @@ const submitFunc = async () => {
 
 
     } catch (error) {
-        console.log(error.message, "message")
+        alert(error.message, "message")
     }
 
 
