@@ -15,6 +15,7 @@ const name = document.querySelector("#name");
 
 const addblogs = async () => {
     try {
+
         const blogData = {
             name: name.value,
             blogTitile: blogTitile.value,
@@ -23,6 +24,9 @@ const addblogs = async () => {
             checkStatus: checkStatus.checked
         }
 
+        if (name.value.length < 3 || blogTitile.value.length < 3 || blogs.value.length < 3) {
+            alert("All fields are required")
+        }
         const docRef = await addDoc(collection(db, "blogs"), blogData);
         blogShow()
         console.log("docRef", docRef)
@@ -31,7 +35,7 @@ const addblogs = async () => {
         blogs.value = ""
         checkStatus.checked = ""
     } catch (error) {
-        alert(error.code , "Error")
+        alert(error.code, "Error")
     }
 }
 
@@ -118,10 +122,10 @@ const deleteFunc = async (ele) => {
     try {
         await deleteDoc(doc(db, "blogs", ele.target.id));
         blogShow()
-        
+
     } catch (error) {
         alert("Error", error.message)
-        
+
     }
 
 }
